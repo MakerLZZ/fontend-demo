@@ -1,0 +1,76 @@
+.movie-box {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .box-item {
+        width: 190px;
+        margin: 5px 4px;
+        padding: 5px;
+        font-size: 14px;
+
+        .box-item-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+
+            a {
+                color: #389bff;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: #0b55a1;
+            }
+        }
+
+        .box-item-img {
+            width: 190px;
+            height: 200px;
+        }
+
+        .box-item-img:hover {
+            cursor: pointer;
+        }
+
+        .box-item-p {
+            margin: 0;
+            padding: 0 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+            white-space: nowrap;
+        }
+    }
+    
+    /*动画效果*/
+    .loading-hidden {
+        display: none;
+    }
+
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        img {
+            /*animation (动画) :绑定选择器, 4s完成动画 linear(匀速) infinite(循环) */
+            animation: que 1s linear infinite;
+        }
+    }
+    /*通过@keyframes规则,能够创建动画 , que 定义动画的名称 可自己定义*/
+    @keyframes que {
+        /*以百分比来规定改变发生的时间 也可以通过"from"和"to",等价于0% 和 100%*/
+        0% {
+            /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

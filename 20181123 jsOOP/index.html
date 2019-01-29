@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>fourthDemo</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h3 class="h3">用户管理</h3>
+    </header>
+    <!-- main -->
+    <main class="main">
+        <div class="main-head">
+            <div>
+                <button class="normal-btn red-btn" onclick="index.handleBatchDel()" type="button">批量删除</button><input class="query-input"
+                    type="text" placeholder="用户名称/登录账号">
+            </div>
+            <div>
+                <button class="normal-btn green-btn" onclick="index.handleOpenUserModal(1,-1)" type="button">新增用户</button>
+            </div>
+        </div>
+        <table class="main-table">
+            <thead class="main-thead">
+                <tr class="main-th-tr">
+                    <th class="checkbox-column"><input class="checkbox" onclick="index.handleClickAllSelectBox()" type="checkbox"><span>序号</span></th>
+                    <th>用户名称</th>
+                    <th>所属部门</th>
+                    <th>所属角色</th>
+                    <th>登录账号</th>
+                    <th>创建时间</th>
+                    <th>创建账号</th>
+                    <th class="operation-column">操作</th>
+                </tr>
+            </thead>
+            <tbody class="main-tbody" id="tableBody">
+            </tbody>
+        </table>
+    </main>
+    <!-- mask -->
+    <div class="mask mask-hidden" id="mask"></div>
+    <!-- user id box -->
+    <input id="userId" type="hidden" value=""></input>
+    <!-- article add box -->
+    <article class="article-box add-box-hidden" id="addBox">
+        <input id="articleType" type="hidden" value=""></input>
+        <input id="formValid" type="hidden" value="0">
+        <h3 class="h3" id="boxHead">新增用户</h3>
+        <form class="box-center" id="articleForm">
+            <div class="have-tip-row">
+                <div class="box-row">
+                    <label>用户名</label><span>：</span><input class="box-input" id="nameInput" oninput="index.handleFormInput('nameInput','nameTip')"
+                        name="name" type="text">
+                </div>
+                <div class="box-tip tip-hidden" id="nameTip">只允许输入中文,英文，-*_ 不超过10位 且不为空</div>
+            </div>
+            <div class="box-row">
+                <label>所属部门</label><span>：</span>
+                <select class="box-select" name="position">
+                    <option value="position1">康凯斯</option>
+                    <option value="position2">几米</option>
+                    <option value="position3">惠州</option>
+                </select>
+            </div>
+            <div class="box-row">
+                <label>所属角色</label><span>：</span>
+                <select class="box-select" name="role">
+                    <option value="role1">仓库管理员</option>
+                    <option value="role2">财务管理员</option>
+                </select>
+            </div>
+            <div class="have-tip-row" id="accRow">
+                <div class="box-row">
+                    <label>登录账号</label><span>：</span><input class="box-input" id="accInput" oninput="index.handleFormInput('accInput','accTip')"
+                        name="account">
+                </div>
+                <div class="box-tip tip-hidden" id="accTip">只允许输入英文和数字，最多不超过15位</div>
+            </div>
+            <div class="have-tip-row" id="pwdRow">
+                <div class="box-row">
+                    <label>初始密码</label><span>：</span><input class="box-input" id="pwdInput" oninput="index.handleFormInput('pwdInput','pwdTip')"
+                        type="password" name="password" autocomplete="off" placeholder="与登录账号相同">
+                </div>
+                <div class="box-tip tip-hidden" id="pwdTip">只允许输入英文和数字，最多不超过15位</div>
+            </div>
+            <div class="have-tip-row">
+                <div class="box-row">
+                    <label>手机号码</label><span>：</span><input class="box-input" id="phoneInput" oninput="index.handleFormInput('phoneInput','phoneTip')"
+                        name="phone" placeholder="找回密码时需要填写手机账号">
+                </div>
+                <div class="box-tip tip-hidden" id="phoneTip">只允许输入正确的手机号码</div>
+            </div>
+        </form>
+        <div>
+            <button class="form-btn green-btn" onclick="index.handelUserModalConfirm()" type="submit">确认</button><button
+                class="form-btn blue-btn" id="resetBtn" type="button" onclick="index.handleUserModalReset()">重置</button><button
+                class="form-btn red-btn" id="cancleBtn" onclick="index.handleUserModalCancle()" type="button">取消</button>
+        </div>
+    </article>
+    <!-- article confirm info modal -->
+    <article class="tip-box tip-box-hidden" id="confirmInfoModal">
+        <input id="tipBoxType" type="hidden" value=""></input>
+        <h3 class="h3">确认信息</h3>
+        <p class="tip-box-info" id="tipBoxDetail"></p>
+        <div class="tip-box-foot">
+            <button class="form-btn red-btn" onclick="index.handleConfirm()" type="submit">确认</button>
+            <button class="form-btn green-btn" onclick="index.handleCancle()" type="button">取消</button>
+        </div>
+    </article>
+
+    <!-- script -->
+    <script src="./js/common.js"></script>
+    <script src="./lib/servise.js"></script>
+    <script src="./lib/myDatatable.js"></script>
+    <script src="./lib/myForm.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

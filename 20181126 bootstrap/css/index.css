@@ -1,0 +1,290 @@
+/* All style */
+button,
+a {
+    overflow: hidden;
+}
+
+.fifth-demo-h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.fifth-demo-p {
+    margin-bottom: 20px;
+}
+
+/* header style */
+.header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-color:rgba(0,0,0,0);
+}
+
+.header-fixed {
+    box-shadow: 0 0 3px #939da6;
+    background-color: #fff;
+}
+
+.header .demo-nav {
+    padding: 3px 20px;
+}
+
+.header .nav-li {
+    margin-left: 46px;
+}
+
+.header .nav-li .nav-li-drop > a {
+    font-size: 14px;
+}
+
+.header .nav-li .nav-li-drop > a:hover {
+    color: #3086c0;
+}
+
+.header .nav-li .nav-a {
+    color: #9e9fa5;
+}
+
+.header .nav-li .nav-a:link {
+    color: #9e9fa5;
+}
+
+.header .nav-li .nav-a:visited {
+    color: #9e9fa5;
+}
+
+.header .nav-li .nav-a:hover {
+    color: #fff;
+}
+
+.header .nav-li .nav-a:focus {
+    color: #fff;
+}
+
+.header .nav-li .nav-fixed {
+    color: #000;
+}
+
+.header .nav-li .nav-fixed:link {
+    color: #000;
+}
+
+.header .nav-li .nav-fixed:visited {
+    color: #000;
+}
+
+.header .nav-li .nav-fixed:hover {
+    color: #3086c0;
+}
+
+.header .nav-li .nav-fixed:focus {
+    color: #3086c0;
+}
+
+/* advantage style */
+.advantage {
+    padding: 50px 0;
+}
+
+.advantage .advantage-item {
+    text-align: center;
+}
+
+.advantage .advantage-item > div > img {
+    width: 100px;
+    height: 100px;
+}
+
+/* platform style */
+.platform {
+    padding: 50px 0 30px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.platform .platform-item {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.platform .platform-item > div {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.platform .platform-item > div > img {
+    width: 100%;
+}
+
+/* news style */
+.news {
+    display: flex;
+    flex-flow: column;
+    padding: 50px 0;
+}
+
+.news .news-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.news .news-h3,
+.news-more {
+    color: #10b0ee;
+}
+
+.news .news-row {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.news .news-item {
+    padding-bottom: 15px;
+    overflow: auto;
+}
+
+.news .news-item .news-img {
+    padding: 0 20px 10px 0;
+}
+
+.news .news-item .news-img > img {
+    width: 220px;
+    height: 150px;
+}
+
+.news .news-item .news-detail > h5 {
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.news .news-item .news-detail > h5:hover {
+    text-decoration: none;
+}
+
+.news .news-item .news-detail > div > time {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.news .news-item .news-detail > p {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    text-overflow: ellipsis;
+}
+
+.news-detail-btn {
+    width: 60px;
+    height: 33px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid red;
+    font-size: 14px;
+    color: red;
+    background-color: #fff;
+}
+
+/* modal */
+.news-detail-modal {
+    height: 520px;
+    overflow-y: auto;
+}
+
+.news-detail-modal .modal-row-img {
+    margin-bottom: 30px;
+}
+
+/* partner */
+.partner {
+    padding: 50px 0 70px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+@media (min-width: 1200px) {
+    .col-md-2-5 {
+        float: left;
+        width: 20%;
+    }
+}
+
+.partner .partner-head {
+    margin-bottom: 45px;
+}
+
+.partner .partner-row > div {
+    margin-bottom: 20px;
+    padding-right: 5px;
+}
+
+.partner .partner-row > div > img {
+    width: 204px;
+}
+
+/* article */
+.article {
+    padding: 40px;
+    color: #fff;
+    background-color: #e74c3c;
+}
+
+/* footer */
+.footer {
+    padding-top: 50px;
+    text-align: center;
+    background-color: #222;
+}
+
+.footer .footer-dl {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+}
+
+.footer .footer-dl > dt {
+    margin-bottom: 20px;
+    color: #a9a9a9;
+}
+
+.footer .footer-dl > dd {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #7f7f7f;
+}
+
+.footer .footer-bottom {
+    padding: 10px;
+    border-top: 1px solid #040404;
+    font-size: 12px;
+    color: #7f7f7f;
+}
+
+.footer .footer-bottom-p {
+    margin: 0;
+}
+
+.footer .footer-bottom-p .footer-bottom-em {
+    font-weight: 900;
+}
+
+.footer .footer-bottom-p .footer-bottom-strong {
+    font-size: 14px;
+    font-weight: 900;
+    color: #3086c0;
+}
+

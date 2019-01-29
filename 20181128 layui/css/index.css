@@ -1,0 +1,159 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+/* header style */
+.header {
+    position: relative;
+    background-color: #393d49;
+}
+
+.header .logo {
+    position: absolute;
+    top: 0;
+    height: 60px;
+    line-height: 60px;
+}
+
+.header .nav-li-right {
+    text-align: right;
+}
+
+/* main style */
+.main {
+    margin-bottom: 20px;
+    padding: 15px 0;
+    background-color: #f2f2f2;
+}
+
+/* main left common style */
+.main .left-col {
+    margin-bottom: 15px;
+}
+
+/* main carousel box style */
+.main .left-col-carousel > img {
+    width: 100%;
+    height: 100%;
+}
+
+.main .left-news {
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.main .left-news .left-news-item {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    border-bottom: 1px solid #dedede;
+}
+
+.main .left-news .left-news-img > img {
+    width: 100%;
+    height: 120px;
+}
+
+.main .left-news .left-news-h4 {
+    height: 35px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 35px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main .left-news .left-news-p {
+    height: 50px;
+    margin: 8px 0;
+    overflow: hidden;
+    line-height: 25px;
+    color: #727272;
+    text-overflow: ellipsis;
+}
+
+.main .left-news .left-news-span {
+    margin: 0 10px 0 3px;
+}
+
+/* main right common style */
+.main .right-col {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.main .right-col-top,
+.right-col-center {
+    height: 360px;
+}
+
+.main .right-col .right-col-head {
+    height: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #e2e2e2;
+    line-height: 40px;
+}
+
+.main .right-col .right-col-box {
+    padding: 10px 15px;
+}
+
+/* main right top style */
+
+/* main right center style */
+.main .right-col-center .right-col-li {
+    overflow: hidden;
+    line-height: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    list-style: none;
+}
+
+.main .right-col-center .right-col-li > span {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+.main .right-col-center .right-col-li > a:hover {
+    color: #ff5722;
+}
+
+/* main right bottom style */
+.main .right-col-bottom .right-col-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .right-col-bottom .right-col-box > a {
+    margin: 5px 8px;
+    padding: 5px 10px;
+    border: 1px solid #dedede;
+    border-radius: 20px;
+    color: #727272;
+}
+
+.main .right-col-bottom .right-col-box > a:hover {
+    color: #ff5722;
+    border-color: #ff5722;
+}
+
+/* footer style */
+.footer {
+    padding: 30px;
+    border-top: 1px solid #e2e2e2;
+    color: #717171;
+    text-align: center;
+}
+
+.footer .footer-box > p {
+    margin: 10px 0;
+}
+
+.footer .footer-box .footer-box-border {
+    margin: 0 10px;
+}

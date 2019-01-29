@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sixthDemo</title>
+    <!-- Index CSS -->
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+</head>
+<body id="body">
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a>首页</a>
+            <a class="movie-btn" id="movieBtn">电影</a>
+            <a>综艺</a>
+            <a>音乐</a>
+            <a>动漫</a>
+            <a>新闻</a>
+            <a class="my-collection-btn" id="myCollectionBtn">我的收藏</a>
+        </nav>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <div class="main-box" id="mainBox"></div>
+    </main>
+    <!-- Aside -->
+    <aside class="aside" id="aside">
+        <div class="aside-box" id="asideBox"></div>
+    </aside>
+    <!-- Confirm Article -->
+    <article class="confirm-article" id="confirmArticle">
+        <div class="confirm-box">
+            <div><h4>提示</h4></div>
+            <div><p>确认删除吗？</p></div>
+            <div>
+                <button class="confirm-box-yes" id="confirmBtn" onclick="handleConfirm()">确认</button><button class="confirm-box-cancle" id="cancleBtn" onclick="handleCancle()">取消</button>
+            </div>
+        </div>
+    </article>
+    <!-- Mask Article -->
+    <article class="mask-article" id="maskArticle"></article>
+    <!-- Template -->
+    <script id="template" type="text/html">
+        {{each subjects as value i}}
+            <div class="main-box-item">
+                <div>
+                    <img class="box-item-img" src="{{value.images.small}}" alt="{{value.title}}">
+                </div>
+                <div>
+                    <p class="box-item-p">{{value.title}}</p>
+                </div>
+                <div class="box-item-bottom">
+                    <span>{{value.mainland_pubdate}}</span><a href="javascript:void(0)" onclick="handleCollect({{value.id}})">收藏</a>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <!-- JQuery -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <!-- Template JS-->
+    <script src="./lib/template.js"></script>
+    <!-- Index JS -->
+    <script src="./js/index.js"></script>
+    <!-- <script src="./js/test.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,66 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Style */
+.main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #2ad3e6, #1a88bb);
+    background-size: cover;
+    background-position: 50%;
+}
+
+/* Main Background */
+.main .main-img {
+    position: absolute;
+    top: 50%;
+    left: 400px;
+    transform: translateY(-60%);
+}
+
+/* Main Login Box */
+.main .login {
+    position: absolute;
+    top: 50%;
+    right: 560px;
+    width: 300px;
+    transform: translateY(-60%);
+}
+
+.main .login-box {
+    position: relative;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.main .login-box .login-head {
+    padding: 15px;
+    border-bottom: 1px solid #e8eaec;
+}
+
+.main .login-box .login-head > h5 {
+    font-weight: 900;
+}
+
+.main .login-box .login-body {
+    padding: 15px;
+}
+
+.main .login-box .login-body-item {
+    padding-top: 10px;
+}
+
+.main .login-box .login-body-label {
+    width: 40px;
+    padding: 8px 10px;
+}
+
+.main .login-box .login-body-row {
+    margin-left: 40px;
+}

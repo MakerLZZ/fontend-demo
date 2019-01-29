@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    /* font-family: Microsoft YaHei; */
+    text-align: center;
+}
+
+/* Normal Style */
+.form-btn,
+.normal-btn {
+    width: 70px;
+    height: 30px;
+    margin: 0 20px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.form-btn {
+    margin: 0 20px;
+}
+
+.normal-btn {
+    margin: 0;
+}
+
+.green-btn {
+    color: #fff;
+    background-color: #4CAF50;
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: #003c6b;
+}
+
+.red-btn {
+    color: #fff;
+    background-color: #ff4d4d;
+}
+
+/* Header Style */
+/* h3 (Article Box) */
+.h3 {
+    margin: 0;
+    padding: 20px;
+    border-bottom: 2px solid #e9e9e9;
+    text-align: left;
+}
+
+/* Main Style */
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Head Style */
+.main .main-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px;
+}
+
+.main .main-head > div {
+    display: flex;
+}
+
+.main .main-head .query-input {
+    width: 300px;
+    height: 28px;
+    margin: 0 20px;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.main .main-head .query-input:focus {
+    outline: none;
+    border: 1px solid #003c6b;   
+}
+
+/* Main Table Style */
+.main .main-table {
+    margin: 0 20px;
+    border: 1px solid #e9e9e9;
+    /* 取消表格间隙 */
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.main .main-table .checkbox {
+    width: 15px;
+    height: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.main .main-table .checkbox-column {
+    display: flex;
+    align-items: center;
+}
+
+.main .main-table .operation-column {
+    width: 180px;
+}
+
+/* main thead style */
+.main .main-table .main-thead {
+    font-size: 14px;
+    font-weight: 100;
+    background-color: #fafafa;
+}
+
+.main .main-table .main-th-tr,
+.main-tbody .main-tb-tr {
+    height: 40px;
+}
+
+.main .main-table .main-th-tr > th,
+.main-tb-tr > td {
+    text-align: left;
+}
+
+/* main table style */
+.main .main-table .main-tbody {
+    font-size: 12px;
+    color: #707070;
+}
+
+.main .main-table .main-tb-a {
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+/* mask style */
+.mask {
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: #707070;
+    /* 淡入淡出？ */
+    transition: all 5s ease-in;
+    transition: all 5s ease-out;
+}
+
+.mask-hidden {
+    display: none;
+}
+
+/* article style */
+.article-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    width: 500px;
+    height: 600px;
+    margin: -300px 0 0 -250px;
+    border: 1px solid #e9e9e9;
+    overflow: auto;
+    background-color: #fff;
+    transition: all 5s ease-in;
+    transition: all 5s ease-out;
+}
+
+.article-box .box-center {
+    font-size: 14px;
+}
+
+.article-box .box-center .have-tip-row {
+    position: relative;
+}
+
+.article-box .box-center .box-tip {
+    position: absolute;
+    top: 38px;
+    left: 112px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #ff8989;
+}
+
+.article-box .box-center .box-row {
+    display: flex;
+    align-items: center;
+    margin: 30px 30px;
+    text-align: left;
+}
+
+.article-box .box-center .box-row > label {
+    flex: .15;
+}
+
+.article-box .box-center .box-input {
+    flex: .85;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.article-box .box-center .box-input:focus,
+.box-select:focus {
+    outline: none;
+    border: 1px solid #003c6b;
+}
+
+.article-box .box-center .box-input-err {
+    border: 2px solid #ff8989;
+}
+
+.tip-hidden {
+    display: none;
+}
+
+.article-box .box-center .box-select {
+    flex: .85;
+    height: 32px;
+}
+
+.add-box-hidden {
+    display: none;
+}
+
+.tip-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1100;
+    width: 300px;
+    height: 200px;
+    margin: -100px 0 0 -150px;
+    border: 1px solid #e9e9e9;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.tip-box-hidden {
+    display: none;
+}
+
+.tip-box .tip-box-info {
+    margin: 20px 10px;
+    text-align: left;
+}
+
+.tip-box .tip-box-foot {
+    margin-top: 30px;
+}
+

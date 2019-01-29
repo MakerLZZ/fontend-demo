@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>seventhDemo</title>
+    <!-- LayUI CSS -->
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <!-- Index CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="layui-container">
+            <div class="layui-row">
+                <div class="logo">
+                    <div class="layui-logo">
+                        <a class="lark-logo" href="javascript:;">
+                            <img src="./img/logo_hxh2.png" height="40">
+                        </a>
+                    </div>
+                </div>
+                <div class="layui-col-md8 layui-col-md-offset2">
+                    <ul class="layui-nav">
+                        <li class="layui-nav-item layui-this"><a href="javascript:;">首页</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">海鲜资讯</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">吃货攻略</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">海鲜知识</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">推荐点评</a></li>
+                        <li class="layui-nav-item"><a href="javascript:;">海鲜百科</a></li>
+                    </ul>
+                </div>
+                <div class="layui-col-md2">
+                    <ul class="layui-nav nav-li-right">
+                        <li class="layui-nav-item">
+                            <a href="javascript:;">个人中心</a>
+                            <dl class="layui-nav-child">
+                                <!-- 二级菜单 -->
+                                <dd><a href="javascript:;">编辑资料</a></dd>
+                                <dd><a href="javascript:;">修改密码</a></dd>
+                                <hr>
+                                <dd><a href="javascript:;">退出登录</a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main class="main">
+        <div class="layui-container">
+            <div class="layui-row layui-col-space15">
+                <!-- left col -->
+                <div class="layui-col-md8">
+                    <div class="left-col">
+                        <div class="layui-carousel" id="myCarousel">
+                            <div carousel-item>
+                                <div class="left-col-carousel"><img src="./img/carousel_1.png"></div>
+                                <div class="left-col-carousel"><img src="./img/carousel_2.png"></div>
+                                <div class="left-col-carousel"><img src="./img/carousel_3.png"></div>
+                                <div class="left-col-carousel"><img src="./img/carousel_4.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-col left-news">
+                        <div class="layui-tab layui-tab-brief" lay-filter="layuiTabSeven">
+                            <ul class="layui-tab-title">
+                                <li class="layui-this">精选推荐</li>
+                                <li>数据表格</li>
+                            </ul>
+                            <div class="layui-tab-content">
+                                <div class="layui-tab-item layui-show">
+                                    <div class="left-news-box" id="leftNewBox"></div>
+                                </div>
+                                <div class="layui-tab-item">
+                                    <div>
+                                        <table class="layui-table" id="indexTable" lay-filter="tableListen"></table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right col -->
+                <div class="layui-col-md4">
+                    <div class="right-col right-col-top">
+                        <h6 class="right-col-head">注册</h6>
+                        <div class="right-col-box">
+                            <form class="layui-form layui-form-pane">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">用户名</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="username" required lay-verify="username" autocomplete="off"
+                                            class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">邮箱</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title" required lay-verify="email" autocomplete="off"
+                                            class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">密码</label>
+                                    <div class="layui-input-block">
+                                        <input id="pwdInput" type="password" name="password" required lay-verify="pass"
+                                            autocomplete="off" class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">确认密码</label>
+                                    <div class="layui-input-block">
+                                        <input type="password" name="repass" required lay-verify="repass" autocomplete="off"
+                                            class="layui-input">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div>
+                                        <button class="layui-btn" lay-submit lay-filter="indexFormBtn">立即注册</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right-col right-col-center">
+                        <h6 class="right-col-head">最新发表</h6>
+                        <div class="right-col-box">
+                            <ul class="right-col-ul">
+                                <li class="right-col-li"><span class="layui-badge">1</span><a href="javascript:;">你可钓过麻虾？</a></li>
+                                <li class="right-col-li"><span class="layui-badge">2</span><a href="javascript:;">【滋味】虾这么做，连壳都不用剥！</a></li>
+                                <li class="right-col-li"><span class="layui-badge">3</span><a href="javascript:;">你真的会吃螃蟹？这四个部位万万不能吃！</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">4</span><a href="javascript:;">螃蟹肚子要朝上，蛤蜊不能加水煮…秋季吃海鲜原来有这么多禁忌</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">5</span><a href="javascript:;">肉嫩汁浓，食欲满满的虾是这样做出来滴</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">6</span><a href="javascript:;">广东常见海鱼品种</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">7</span><a href="javascript:;">海鱼比河鱼好？真相可能跟你想的不一样</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">8</span><a href="javascript:;">黄花鱼的终极做法，鲜嫩的要流口水~</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">9</span><a href="javascript:;">蒜香花甲螺，一颗一口鲜！</a></li>
+                                <li class="right-col-li"><span class="layui-badge layui-bg-gray">10</span><a href="javascript:;">开背虾的做法</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="right-col right-col-bottom">
+                        <h6 class="right-col-head">热门标签</h6>
+                        <div class="right-col-box" id="markListBox"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="layui-container">
+            <div class="layui-row footer-box">
+                <p>© 2018 海鲜湖(HaiXianHu.com) 版权所有，保留所有权利。</p>
+                <p>版权声明：部分文章摘自互联网，如有侵权，麻烦告知删除，谢谢。</p>
+                <p><a>关于我们</a><span class="footer-box-border">|</span><a>联系我们</a><span class="footer-box-border">|</span><a>商业合作</a></p>
+                <p><a>粤ICP备07000266号-10</a><span class="footer-box-border">|</span><a>Powered by ThisCMS</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- LayUI JS -->
+    <script src="./layui/layui.js"></script>
+    <!-- layUI Config -->
+    <script src="./js/layuiConfig.js"></script>
+    <!-- News List Template -->
+    <script type="text/html" id="leftNewsItem">
+        {{# layui.each(d.list, function(index, item){ }}
+            <div class="layui-row layui-col-space15 left-news-item">
+                <div class="layui-col-md4 left-news-img">
+                    <img src="{{item.imgSrc}}" alt="">
+                </div>
+                <div class="layui-col-md8">
+                    <h4 class="left-news-h4">{{item.title}}</h4>
+                    <p class="left-news-p">{{item.detail}}</p>
+                    <div class="left-news-bottom">
+                        <a><i class="layui-icon layui-icon-username"></i><span class="left-news-span">{{item.source}}</span></a>
+                        <i class="layui-icon layui-icon-log"></i><span class="left-news-span">{{item.time}}</span>
+                        <a><i class="layui-icon layui-icon-note"></i><span class="left-news-span">{{item.mark}}</span></a>
+                    </div>
+                </div>
+            </div>
+        {{# }); }}
+        {{#  if(d.list.length === 0){ }}
+          无数据
+        {{#  } }}
+    </script>
+    <!-- Mark List Template -->
+    <script type="text/html" id="markItem">
+        {{# layui.each(d.list, function(index, item){ }}
+            <a href="javascript:;">{{item.text}}</a>
+        {{# }); }}
+        {{#  if(d.list.length === 0){ }}
+          无数据
+        {{#  } }}
+    </script>
+    <!-- Tool Bar Template -->
+    <script type="text/html" id="indexToolBar">
+        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+    <!-- Modify Box Template -->
+    <script type="text/html" id="modifyBox">
+        <textarea id="modifyBoxInput" name="" required lay-verify="required" placeholder="请输入" class="layui-textarea"></textarea>
+    </script>
+    <!-- Layui Init JS -->
+    <script>
+        //加载入口
+        layui.extend({
+            // myElement: 'app/myElement',
+            formRule: 'app/form/formRule',
+            formSubmit: 'app/form/formSubmit',
+            newsListTpl: 'lib/template/newsListTpl',
+            datatableTpl: 'lib/template/datatableTpl',
+            markListTpl: 'lib/template/markListTpl',
+            myFixbar: 'lib/fixbar/myFixbar',
+            myCarousel: 'lib/carousel/myCarousel'
+        }).use(['element', 'formRule', 'formSubmit', 'datatableTpl', 'newsListTpl', 'markListTpl', 'myFixbar', 'myCarousel']);
+    </script>
+</body>
+
+</html>
