@@ -1,2 +1,2 @@
-# Fontend-Demo
+# fontend-demo
 demo repository
